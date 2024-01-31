@@ -8,6 +8,9 @@ TagManager:
   - AlienBullet
   - Ship
   - Alien
+  - boundary
+  - finishLine
+  - shield
   layers:
   - Default
   - TransparentFX

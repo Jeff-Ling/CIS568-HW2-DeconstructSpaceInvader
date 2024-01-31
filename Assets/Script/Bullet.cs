@@ -18,21 +18,25 @@ public class Bullet : MonoBehaviour
         GetComponent<Rigidbody>().AddRelativeForce(thrust);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
+        if (other.tag == "shield")
+        {
+            Die();
+        }
         if (this.tag == "ShipBullet")
         {
-            if (collision.collider.tag == "Alien")
+            if (other.tag == "Alien")
             {
-                collision.collider.GetComponent<Alien>().Die();
+                other.GetComponent<Alien>().Die();
                 this.Die();
             }
         }
         else if (this.tag == "AlienBullet")
         {
-            if (collision.collider.tag == "Ship")
+            if (other.tag == "Ship")
             {
-                collision.collider.GetComponent<Ship>().Die();
+                other.GetComponent<Ship>().Die();
                 this.Die();
             }
         }

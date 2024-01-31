@@ -7,8 +7,12 @@ public class Ship : MonoBehaviour
     public float speed = 5f;
     public float rotation = 270;
     public float lives = 3;
+    public float fireCoolDown = 2f;
+    private float nextFireTime = 0f;
     public GameObject bullet;
+    public GameObject cam;
     public GameObject GlobalObject;
+    public AudioClip ShootingSound;
 
     // Start is called before the first frame update
     void Start()
@@ -18,18 +22,25 @@ public class Ship : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Time.time > nextFireTime)
         {
-            // Instantiate the Bullet
-            Vector3 spawnPos = gameObject.transform.position;
-            spawnPos.x += 1.5f * Mathf.Cos(rotation * Mathf.PI / 180);
-            spawnPos.z -= 1.5f * Mathf.Sin(rotation * Mathf.PI / 180);
-            GameObject obj = Instantiate(bullet, spawnPos, Quaternion.identity) as GameObject;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                // Instantiate the Bullet
+                Vector3 spawnPos = gameObject.transform.position;
+                spawnPos.x += 1.5f * Mathf.Cos(rotation * Mathf.PI / 180);
+                spawnPos.z -= 1.5f * Mathf.Sin(rotation * Mathf.PI / 180);
+                GameObject obj = Instantiate(bullet, spawnPos, Quaternion.identity) as GameObject;
 
-            Bullet b = obj.GetComponent<Bullet>();
+                Bullet b = obj.GetComponent<Bullet>();
 
-            Quaternion rot = Quaternion.Euler(new Vector3(0, rotation, 0));
-            b.heading = rot;
+                Quaternion rot = Quaternion.Euler(new Vector3(0, rotation, 0));
+                b.heading = rot;
+
+                AudioSource.PlayClipAtPoint(ShootingSound, gameObject.transform.position);
+
+                nextFireTime = Time.time + fireCoolDown;
+            }
         }
 
     }
@@ -43,6 +54,8 @@ public class Ship : MonoBehaviour
 
     public void Die()
     {
-        // -- lives connect with global
+        lives--;
+        cam.GetComponent<CameraShake>().shakeDuration = 0.5f;
+        GlobalObject.GetComponent<Global>().UpdateLivesTextUI();
     }
 }
