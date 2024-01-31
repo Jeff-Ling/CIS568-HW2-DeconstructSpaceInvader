@@ -22,6 +22,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.tag == "shield")
         {
+            other.GetComponent<Shield>().UpdateShieldLivesText();
             Die();
         }
         if (this.tag == "ShipBullet")

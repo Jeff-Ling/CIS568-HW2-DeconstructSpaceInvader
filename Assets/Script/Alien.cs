@@ -75,6 +75,7 @@ public class Alien : MonoBehaviour
         if (other.tag == "boundary")
         {
             moveRight = !moveRight;
+            horizontalSpeed += 2;
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - descentAmount);
         }
         if (other.tag == "finishLine")
