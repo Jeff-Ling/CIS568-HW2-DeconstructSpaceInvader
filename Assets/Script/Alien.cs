@@ -10,19 +10,21 @@ public class Alien : MonoBehaviour
     public float minShootDelay = 1.0f;
     public float maxShootDelay = 5.0f;
 
-    public float rotation = 90;
+    public float rotation = 0;
     public bool moveRight;
     public float horizontalSpeed = 5f;
     public float descentAmount = 1f;
 
     public int score = 10;
 
+    private bool enable = true;
+
     public AudioClip DeathSound;
 
     // Start is called before the first frame update
     void Start()
     {
-        rotation = 90;
+        //rotation = 90;
 
         // Determine starting direction
         System.Random random = new System.Random();
@@ -30,12 +32,14 @@ public class Alien : MonoBehaviour
         if (randomNumber == 0) moveRight = true;
         else moveRight = false;
 
+        this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
         StartCoroutine(ShootRandomly());
     }
 
     private IEnumerator ShootRandomly()
     {
-        while (true)
+        while (enable)
         {
             yield return new WaitForSeconds(UnityEngine.Random.Range(minShootDelay, maxShootDelay));
 
@@ -46,7 +50,7 @@ public class Alien : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
+        if (enable) Movement();
     }
 
     void Movement()
@@ -60,27 +64,37 @@ public class Alien : MonoBehaviour
             
         // Instantiate the Bullet
         Vector3 spawnPos = gameObject.transform.position;
-        spawnPos.x += 1.5f * Mathf.Cos(rotation * Mathf.PI / 180);
-        spawnPos.z -= 1.5f * Mathf.Sin(rotation * Mathf.PI / 180);
+        spawnPos.y -= 1.5f;
+        //spawnPos.z -= 1.5f * Mathf.Sin(rotation * Mathf.PI / 180);
         GameObject obj = Instantiate(bullet, spawnPos, Quaternion.identity) as GameObject;
 
         Bullet b = obj.GetComponent<Bullet>();
 
-        Quaternion rot = Quaternion.Euler(new Vector3(0, rotation, 0));
+        Quaternion rot = Quaternion.Euler(new Vector3(0, 0, -90));
         b.heading = rot;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (enable)
+        {
+            if (collision.collider.tag == "finishLine")
+            {
+                GlobalObject.GetComponent<Global>().Lose();
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "boundary")
+        if (enable)
         {
-            moveRight = !moveRight;
-            horizontalSpeed += 2;
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - descentAmount);
-        }
-        if (other.tag == "finishLine")
-        {
-            GlobalObject.GetComponent<Global>().Lose();
+            if (other.tag == "boundary")
+            {
+                moveRight = !moveRight;
+                horizontalSpeed += 2;
+                transform.position = new Vector3(transform.position.x, transform.position.y - descentAmount, transform.position.z);
+            }
         }
     }
 
@@ -88,6 +102,11 @@ public class Alien : MonoBehaviour
     {
         GlobalObject.GetComponent<Global>().AlienDie(score);
         AudioSource.PlayClipAtPoint(DeathSound, gameObject.transform.position);
-        Destroy(gameObject);
+
+        enable = false;
+        this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
+        this.GetComponent<Rigidbody>().useGravity = true;
+
+        //Destroy(gameObject, 20f);
     }
 }
