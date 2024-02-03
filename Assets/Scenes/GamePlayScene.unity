@@ -143,7 +143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &30213940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,7 +165,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!54 &30213941
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -348,7 +350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &64336383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,7 +372,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!54 &64336384
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -609,7 +613,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &218509331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,7 +635,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!54 &218509332
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -765,7 +771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &320832616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -787,7 +793,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!54 &320832617
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1267,7 +1275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &514358402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1289,7 +1297,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!54 &514358403
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1423,7 +1433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &560040487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1445,7 +1455,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!54 &560040488
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1929,7 +1941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &734099902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1951,7 +1963,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!54 &734099903
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2085,7 +2099,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &740302190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2107,7 +2121,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!54 &740302191
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2241,7 +2257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &790995127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2263,7 +2279,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!54 &790995128
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2532,7 +2550,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!1 &830022569
 GameObject:
   m_ObjectHideFlags: 0
@@ -2673,7 +2693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &870139436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2695,7 +2715,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!54 &870139437
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2944,7 +2966,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883031972}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -2961,7 +2983,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!1 &933175152
 GameObject:
@@ -3362,7 +3384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1040320828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3384,7 +3406,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!54 &1040320829
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3553,7 +3577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1238424509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3575,7 +3599,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!54 &1238424510
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3952,7 +3978,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1461680245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3974,7 +4000,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!54 &1461680246
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4108,7 +4136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1714712454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4130,7 +4158,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!54 &1714712455
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4776,7 +4806,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1972763357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4798,7 +4828,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!54 &1972763358
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4932,7 +4964,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1993367443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4954,7 +4986,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!54 &1993367444
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5088,7 +5122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2090823488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5110,7 +5144,9 @@ MonoBehaviour:
   horizontalSpeed: 5
   descentAmount: 1
   score: 10
+  enable: 1
   DeathSound: {fileID: 8300000, guid: 774a3b5ccb4f60b4ca07bcddbce6c765, type: 3}
+  DeathMaterial: {fileID: 2100000, guid: b901926990ca5274e93c0fc18bd98a86, type: 2}
 --- !u!54 &2090823489
 Rigidbody:
   m_ObjectHideFlags: 0

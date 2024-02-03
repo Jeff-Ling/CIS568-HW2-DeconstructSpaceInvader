@@ -26,7 +26,6 @@ public class Global : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        alienNum = CountAliens();
         if (ship.GetComponent<Ship>().lives <= 0) Lose();
         if (alienNum <= 0 && ship.GetComponent<Ship>().lives > 0) Win();
     }
@@ -43,6 +42,7 @@ public class Global : MonoBehaviour
 
     public void AlienDie(float s)
     {
+        alienNum--;
         score += s;
         ScoreTextUI.text = score.ToString();
     }

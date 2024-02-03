@@ -17,9 +17,10 @@ public class Alien : MonoBehaviour
 
     public int score = 10;
 
-    private bool enable = true;
+    public bool enable = true;
 
     public AudioClip DeathSound;
+    public Material DeathMaterial;
 
     // Start is called before the first frame update
     void Start()
@@ -100,10 +101,11 @@ public class Alien : MonoBehaviour
 
     public void Die()
     {
+        enable = false;
         GlobalObject.GetComponent<Global>().AlienDie(score);
         AudioSource.PlayClipAtPoint(DeathSound, gameObject.transform.position);
+        this.gameObject.GetComponent<MeshRenderer>().material = DeathMaterial;
 
-        enable = false;
         this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionZ;
         this.GetComponent<Rigidbody>().useGravity = true;
 

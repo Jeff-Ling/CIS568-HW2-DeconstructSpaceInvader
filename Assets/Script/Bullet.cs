@@ -6,39 +6,52 @@ public class Bullet : MonoBehaviour
 {
     public Vector3 thrust;
     public Quaternion heading;
+    public bool enable = true;
+    public Material deathMaterial;
 
-    public float LifeTime = 10f;
+    //public float LifeTime = 10f;
 
     void Start()
     {
-        Destroy(gameObject, LifeTime);
-        thrust.x = 400.0f;
+        //Destroy(gameObject, LifeTime);
+        thrust.x = 2000.0f;
         GetComponent<Rigidbody>().drag = 0;
         GetComponent<Rigidbody>().MoveRotation(heading);
         GetComponent<Rigidbody>().AddRelativeForce(thrust);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.tag == "shield")
+        if (enable)
         {
-            other.GetComponent<Shield>().UpdateShieldLivesText();
-            Die();
-        }
-        if (this.tag == "ShipBullet")
-        {
-            if (other.tag == "Alien")
+            if (collision.collider.tag == "finishLine")
             {
-                other.GetComponent<Alien>().Die();
-                this.Die();
+                enable = false;
+                this.gameObject.GetComponent<MeshRenderer>().material = deathMaterial;
             }
-        }
-        else if (this.tag == "AlienBullet")
-        {
-            if (other.tag == "Ship")
+            if (collision.collider.tag == "shield")
             {
-                other.GetComponent<Ship>().Die();
-                this.Die();
+                collision.collider.GetComponent<Shield>().UpdateShieldLivesText();
+                Die();
+            }
+            if (this.tag == "ShipBullet")
+            {
+                if (collision.collider.tag == "Alien")
+                {
+                    if (collision.collider.GetComponent<Alien>().enable)
+                    {
+                        collision.collider.GetComponent<Alien>().Die();
+                        this.Die();
+                    }
+                }
+            }
+            else if (this.tag == "AlienBullet")
+            {
+                if (collision.collider.tag == "Ship")
+                {
+                    collision.collider.GetComponent<Ship>().Die();
+                    this.Die();
+                }
             }
         }
     }
